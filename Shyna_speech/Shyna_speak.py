@@ -1,7 +1,7 @@
 from google_speech import Speech
 
 
-def shyna_speaks(msg):
+def shyna_speaks(msg: object) -> object:
     lang = "en"
     speech = Speech(msg, lang)
     sox_effects = ("speed", "1", )
