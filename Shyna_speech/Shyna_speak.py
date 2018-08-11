@@ -13,4 +13,4 @@ def test_shyna_speaks():
     shyna_speaks(text)
 
 
-test_shyna_speaks()
+# test_shyna_speaks()
