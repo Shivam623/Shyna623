@@ -1,0 +1,15 @@
+While working on speech recognition module be sure that you have below requirements
+
+For google speech api
+
+1) sudo apt-get install portaudio19-dev
+2) sudo pip3 install Pyaudio
+
+
+
+List of commands used in this package are
+
+1) sudo pip3 install google_speech
+2) sudo apt-get install portaudio19-dev
+3) sudo pip3 install Pyaudio
+4) sudo pip install speechrecognition
