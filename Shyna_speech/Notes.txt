@@ -9,3 +9,8 @@ For Shyna_response.py
 2) sudo apt-get install portaudio19-dev
 3) sudo pip3 install Pyaudio
 4) sudo pip install speechrecognition
+
+
+In some system there can be warning which can be ignore as well as suppress. I found below link helpful:
+
+https://stackoverflow.com/questions/7088672/pyaudio-working-but-spits-out-error-messages-each-time
