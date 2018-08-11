@@ -1,5 +1,6 @@
 from google_speech import Speech
 
+
 def shyna_speaks(msg):
     lang = "en"
     speech = Speech(msg, lang)
