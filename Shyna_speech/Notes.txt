@@ -26,25 +26,33 @@ cd Desktop/
 mkdir sphinx-source
 cd sphinx-source/
 git clone https://github.com/cmusphinx/sphinxbase.git
-la
-la sphinxbase/
 cd sphinxbase/
  ./autogen.sh
-la
-make
-udo make install
+ ./Configure
+make clean all
+make check
+sudo make install
 cd
 cd Desktop/
 cd sphinx-source/
 cd sphinxbase/
 git clone https://github.com/cmusphinx/pocketsphinx.git
-la
-la pocketsphinx/
 cd pocketsphinx/
  ./autogen.sh
-la
-make
+ ./Configure
+make clean all
+make check
 sudo make install
 cd
+cd Desktop
+cd sphinx-source
+git clone https://github.com/cmusphinx/sphinxtrain.git
+cd sphinxtrain
+./autogen.sh
+./configure
+make clean all
+make check
+sudo make install
+
 python3 -m pip3 install --upgrade pip3 setuptools wheel
 sudo pip3 install pocketsphinx
