@@ -1,0 +1,53 @@
+Language model created by QuickLM on Sun Aug 12 03:53:57 EDT 2018
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 5 sentences and 9 words
+
+\data\
+ngram 1=9
+ngram 2=13
+ngram 3=8
+
+\1-grams:
+-0.8573 </s> -0.3010
+-0.8573 <s> -0.2218
+-1.5563 ARE -0.2762
+-1.5563 HEY -0.2361
+-1.5563 LISTEN -0.2361
+-1.5563 LISTENING -0.2361
+-1.5563 SHYNA -0.2361
+-1.5563 THERE -0.2361
+-1.2553 YOU -0.2762
+
+\2-grams:
+-1.0000 <s> ARE 0.0000
+-1.0000 <s> HEY 0.0000
+-1.0000 <s> LISTEN 0.0000
+-1.0000 <s> SHYNA 0.0000
+-1.0000 <s> YOU -0.1761
+-0.3010 ARE YOU -0.1761
+-0.3010 HEY </s> -0.3010
+-0.3010 LISTEN </s> -0.3010
+-0.3010 LISTENING </s> -0.3010
+-0.3010 SHYNA </s> -0.3010
+-0.3010 THERE </s> -0.3010
+-0.6021 YOU LISTENING 0.0000
+-0.6021 YOU THERE 0.0000
+
+\3-grams:
+-0.3010 <s> ARE YOU
+-0.3010 <s> HEY </s>
+-0.3010 <s> LISTEN </s>
+-0.3010 <s> SHYNA </s>
+-0.3010 <s> YOU THERE
+-0.3010 ARE YOU LISTENING
+-0.3010 YOU LISTENING </s>
+-0.3010 YOU THERE </s>
+
+\end\
