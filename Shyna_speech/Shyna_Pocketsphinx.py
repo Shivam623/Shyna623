@@ -1,2 +1,4 @@
 from pocketsphinx import LiveSpeech
-for phrase in LiveSpeech(): print(phrase)
+
+for phrase in LiveSpeech():
+    print(phrase)
