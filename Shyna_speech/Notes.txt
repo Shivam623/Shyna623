@@ -56,3 +56,8 @@ sudo make install
 
 python3 -m pip3 install --upgrade pip3 setuptools wheel
 sudo pip3 install pocketsphinx
+
+Once done with this we need to train for specific word to trigger the system. To acheive this we need to create a
+dictionary file and lm file and paste in model folder of pocket sphinx
+
+Link to create model is : http://www.speech.cs.cmu.edu/tools/lmtool-new.html
