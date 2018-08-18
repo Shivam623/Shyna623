@@ -7,7 +7,7 @@ def shyna_offline():
         print(type(phrase))
         res = str(phrase)
         print(res)
-        if res == "SHYNA":
+        if res.__contains__("SHYNA"):
             print ("did you just call me?")
             res = "did you just call me?"
             Shyna_speak.shyna_speaks(res)
