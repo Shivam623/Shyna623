@@ -1,7 +1,7 @@
 from pocketsphinx import LiveSpeech
 from Shyna_speech import Shyna_convodb
 import speech_recognition as sr
-
+'''The start of Speech system is here,'''
 
 def shyna_offline():
     for phrase in LiveSpeech():
