@@ -1,28 +1,39 @@
 from pocketsphinx import LiveSpeech
-from Shyna_speech import  Shyna_speak
+from Shyna_speech import Shyna_convodb
 import speech_recognition as sr
 
 
 def shyna_offline():
     for phrase in LiveSpeech():
-        print(type(phrase))
+        print("offline")
         res = str(phrase)
         print(res)
         if res.__contains__("SHYNA"):
-            # print("did you just call me?")
-            res = "Shiv!"
-            Shyna_speak.shyna_speaks(res)
-            try:
-                r = sr.Recognizer()
-                with sr.Microphone() as source:
-                    print("say Something")
-                    audio = r.listen(source, phrase_time_limit=None)
-                    response = r.recognize_google(audio)
-                    # Shyna_speak.shyna_speaks("Yes Query Is Passing")
-                    print(response)
-                    # return response
-            except sr.UnknownValueError:
-                print("what was that")
+            Shyna_convodb.check_key(res)
+            shyna_match()
+
+
+def shyna_match():
+    try:
+        r = sr.Recognizer()
+        with sr.Microphone() as source:
+            print("Online")
+            audio = r.listen(source, phrase_time_limit=None)
+            response = r.recognize_google(audio)
+            response.lower()
+            print(response)
+            shyna_keyword(response)
+    except sr.UnknownValueError:
+        print("what was that")
+
+
+def shyna_keyword(res):
+    try:
+        Shyna_convodb.check_key(res)
+    except Exception as e:
+        print(e)
+    finally:
+        shyna_offline()
 
 
 shyna_offline()
