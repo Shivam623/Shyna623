@@ -35,7 +35,7 @@ def check_key(key):
         print("DB close")
 
 
-# check_key('what's up')
+# check_key('how are you')
 
 
 def shyna_get_all():
