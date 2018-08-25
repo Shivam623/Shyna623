@@ -14,7 +14,7 @@ def shyna_speaks(msg: object) -> object:
 
 
 def test_shyna_speaks():
-    text = "I’m good|Pretty good|I’m well|I’m OK|Not too bad|Same old, same old|Yeah, all right|I’m alive!"
+    text = "Hey! My name is Shaayna. I have ears and Shiv is working on my eyes. I hope we will see each other soon"
     shyna_speaks(text)
 
 
