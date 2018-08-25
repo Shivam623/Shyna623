@@ -61,3 +61,5 @@ Once done with this we need to train for specific word to trigger the system. To
 dictionary file and lm file and paste in model folder of pocket sphinx
 
 Link to create model is : http://www.speech.cs.cmu.edu/tools/lmtool-new.html
+
+Link for SqliteDB browser: https://sqlitebrowser.org/
