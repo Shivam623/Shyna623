@@ -63,3 +63,9 @@ dictionary file and lm file and paste in model folder of pocket sphinx
 Link to create model is : http://www.speech.cs.cmu.edu/tools/lmtool-new.html
 
 Link for SqliteDB browser: https://sqlitebrowser.org/
+
+How to install NLTK:
+
+Install NLTK: run sudo pip install -U nltk
+Install Numpy (optional): run sudo pip install -U numpy
+Test installation: run python then type import nltk
