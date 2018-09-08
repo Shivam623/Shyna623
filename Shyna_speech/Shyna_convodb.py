@@ -1,5 +1,6 @@
 import sqlite3
 from Shyna_speech import Shyna_speak
+import random
 
 
 def createcommandsDB(key, res, func):
@@ -53,4 +54,35 @@ def shyna_get_all():
         conn.close()
         print("db Close")
 
+
+def shyna_for_tele(key):
+    print(key, type(key))
+    conn = sqlite3.connect('test.db')
+    data = (str(key).lower()).translate(str.maketrans({"'": None}))
+    print(data)
+    try:
+        res = None
+        cursor = conn.execute("Select response FROM commands WHERE keyword = '" + data + "'");
+        # print(cursor)
+        cursor = cursor.fetchall()
+        for row in cursor:
+            res = row[0]
+            print(res)
+            res = random.choice(str(res).split('|'))
+            print(res)
+            return res
+            # Shyna_speak.shyna_speaks(res)
+        if res == None:
+            res = "Not trained on this yet"
+            # Shyna_speak.shyna_speaks(res)
+            return res
+    except Exception as e:
+        print(e)
+        return 'Ran into an Error it seems!'
+    finally:
+        conn.close()
+        print("DB close")
+
+
+# shyna_for_tele('shyna')
 # shyna_get_all()
