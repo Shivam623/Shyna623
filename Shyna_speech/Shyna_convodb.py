@@ -1,6 +1,17 @@
 import sqlite3
-from Shyna_speech import Shyna_speak
+from Shyna_speech import Shyna_speak, Remove_punctuation
 import random
+
+
+def notdoundindb(data):
+    key = data
+    print("I am here")
+    conn = sqlite3.connect('test.db')
+    conn.execute("INSERT OR IGNORE INTO notfound (key) \
+          VALUES (? )", (key,));
+    conn.commit()
+    print("Records created successfully")
+    conn.close()
 
 
 def createcommandsDB(key, res, func):
@@ -15,7 +26,7 @@ def createcommandsDB(key, res, func):
 
 def check_key(key):
     conn = sqlite3.connect('test.db')
-    data = (str(key).lower()).translate(str.maketrans({"'": None}))
+    data = Remove_punctuation.remove_punctuation(key)
     print(data)
     try:
         res = None
@@ -58,12 +69,12 @@ def shyna_get_all():
 def shyna_for_tele(key):
     print(key, type(key))
     conn = sqlite3.connect('test.db')
-    data = (str(key).lower()).translate(str.maketrans({"'": None}))
+    data = Remove_punctuation.remove_punctuation(key)
     print(data)
     try:
         res = None
         cursor = conn.execute("Select response FROM commands WHERE keyword = '" + data + "'");
-        # print(cursor)
+        print(cursor)
         cursor = cursor.fetchall()
         for row in cursor:
             res = row[0]
@@ -73,7 +84,12 @@ def shyna_for_tele(key):
             return res
             # Shyna_speak.shyna_speaks(res)
         if res == None:
-            res = "Not trained on this yet"
+            print('I ran complete, just passing value')
+            a = "Not trained on this yet, I'll inform Shiv, thanks by the way :)|Why every third sentence is a news to " \
+                "me, sorry I'll inform to Shiv| Please keep chatting, I am just a kid don't know much :(|Ohkay that " \
+                "come out off no where"
+            res = random.choice(str(a).split('|'))
+            print(res)
             # Shyna_speak.shyna_speaks(res)
             return res
     except Exception as e:
@@ -81,8 +97,9 @@ def shyna_for_tele(key):
         return 'Ran into an Error it seems!'
     finally:
         conn.close()
+        notdoundindb(data)
         print("DB close")
 
 
-# shyna_for_tele('shyna')
+# shyna_for_tele("hahahaha......")
 # shyna_get_all()
