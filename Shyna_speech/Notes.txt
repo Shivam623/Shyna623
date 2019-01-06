@@ -2,7 +2,8 @@ List of commands used in this package are
 
 For Shyna_speak.py
 
-1) sudo pip3 install google_speech
+1) sudo pip3 install sox
+2) sudo pip3 install google_speech
 
 For Shyna_response.py
 
@@ -18,6 +19,16 @@ https://stackoverflow.com/questions/7088672/pyaudio-working-but-spits-out-error-
 
 
 Working commands to install CMU pocket sphinx
+
+You may ned to install Swig, Bison and Flex
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install flex bison swig
+
+Also Install
+
+sudo apt-get install libpulse-dev
 
 sudo apt-get update
 sudo apt-get upgrade
