@@ -3,7 +3,8 @@ List of commands used in this package are
 For Shyna_speak.py
 
 1) sudo pip3 install sox
-2) sudo pip3 install google_speech
+2) sudo apt-get install sox libsox-fmt-mp3
+3) sudo pip3 install google_speech
 
 For Shyna_response.py
 
