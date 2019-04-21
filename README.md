@@ -19,5 +19,5 @@ Refer NLTK Commands.txt
 
 After running successfully all above commands try running Shyna_speak.py test function
 
-Note:_May receive Warning link "sox WARN alsa: can't encode 0-bit Unknown or not applicable
+Note:_May receive Warning says "sox WARN alsa: can't encode 0-bit Unknown or not applicable
 " Haven't found any solution yet as it is not causing any problem_
