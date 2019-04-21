@@ -1,0 +1,7 @@
+Open Terminal and paste:
+
+sudo pip3 install -U nltk
+
+sudo pip3 install -U numpy
+Numpy is good as we will need in face detection also
+Run Download NLTK_Data.py to download all packages
